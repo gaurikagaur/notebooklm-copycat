@@ -1,0 +1,127 @@
+/* Dark Mode Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark gray background */
+    color: #e0e0e0; /* Light gray text */
+}
+
+/* Main container styling */
+.main {
+    padding: 2rem;
+    background-color: #1E1E1E; /* Slightly lighter dark gray for content background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* More pronounced shadow for dark mode */
+}
+
+/* Header styling */
+.stTitle {
+    color: #BB86FC; /* Light purple for titles in dark mode */
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Subheader styling */
+h2 {
+    color: #03DAC6; /* Teal for subheaders in dark mode */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #03DAC6; /* Teal underline */
+    padding-bottom: 0.5rem;
+}
+
+/* File uploader styling */
+.uploadedFile {
+    border: 2px dashed #03DAC6; /* Teal dashed border */
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background-color: #2C2C2C; /* Darker gray for file uploader background */
+    text-align: center;
+}
+
+/* Button styling */
+.stButton>button {
+    width: auto;
+    min-width: 150px;
+    border-radius: 20px; /* Pill-shaped buttons */
+    padding: 0.75rem 1.5rem;
+    background-color: #BB86FC; /* Light purple for buttons */
+    color: #121212; /* Dark text for contrast on light purple button */
+    border: none;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.stButton>button:hover {
+    background-color: #9e6ddb; /* Darker purple on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Success message styling */
+.success {
+    background-color: #1E3A1E; /* Dark green background */
+    color: #A5D6A7; /* Light green text */
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    border-left: 5px solid #4CAF50; /* Green left border */
+}
+
+/* Error message styling */
+.error {
+    background-color: #3E1C1C; /* Dark red background */
+    color: #EF9A9A; /* Light red text */
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    border-left: 5px solid #F44336; /* Red left border */
+}
+
+/* Audio player styling */
+.stAudio {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Text area styling */
+.stTextArea>div>div>textarea {
+    font-family: 'Consolas', 'Courier New', Courier, monospace;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #444; /* Gray border */
+    background-color: #2C2C2C; /* Darker gray background */
+    color: #e0e0e0; /* Light gray text */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Progress bar styling */
+.stProgress {
+    height: 10px;
+    background-color: #333; /* Dark gray background for progress bar */
+    border-radius: 5px;
+}
+
+.stProgress>div {
+    background-color: #BB86FC; /* Light purple progress indicator */
+    border-radius: 5px;
+}
+
+/* Sidebar styling */
+.sidebar .sidebar-content {
+    background-color: #1E1E1E; /* Dark background for sidebar */
+    color: #e0e0e0; /* Light gray text for sidebar */
+}
+
+.sidebar .sidebar-content .stButton>button {
+    background-color: #BB86FC; /* Light purple for sidebar buttons */
+    color: #121212; /* Dark text for contrast */
+}
+
+.sidebar .sidebar-content .stButton>button:hover {
+    background-color: #9e6ddb; /* Darker purple on hover */
+}
