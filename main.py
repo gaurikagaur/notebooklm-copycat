@@ -17,9 +17,19 @@ def main():
         layout="wide"
     )
 
-    # Load custom CSS
-    with open('styles.css') as f:
+    # Initialize session state for theme
+    if 'theme' not in st.session_state:
+        st.session_state.theme = "light"
+
+    # Load custom CSS based on theme
+    css_file = "styles_dark.css" if st.session_state.theme == "dark" else "styles.css"
+    with open(css_file) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
+    # Theme toggle
+    if st.sidebar.button("Toggle Theme"):
+        st.session_state.theme = "dark" if st.session_state.theme == "light" else "light"
+        st.experimental_rerun()
 
     st.title("🎙️ Document to Podcast Converter")
     st.markdown("Transform your documents into engaging podcasts with AI")
@@ -44,9 +54,16 @@ def main():
             with st.spinner("Processing document..."):
                 file_extension = get_file_extension(uploaded_file.name)
                 st.session_state.processed_text = extract_text(uploaded_file, file_extension)
+                # Clear previous script and audio when new file is processed
+                st.session_state.generated_script = None
+                st.session_state.audio_file = None
                 st.success("Document processed successfully!")
         else:
             st.error("Invalid file. Please upload a PDF, DOCX, or TXT file under 10MB.")
+            # Clear processed text if file is invalid
+            st.session_state.processed_text = None
+            st.session_state.generated_script = None
+            st.session_state.audio_file = None
 
     # Podcast customization section
     st.header("2. Customize Your Podcast")
