@@ -1,4 +1,3 @@
-django-tts>=0.3.1
 docx>=0.2.4
 google-generativeai>=0.8.4
 gtts>=2.5.4
@@ -14,4 +13,3 @@ streamlit>=1.42.0
 torch>=2.6.0
 trafilatura>=2.0.0
 transformers>=4.48.3
-tts==0.17.2
